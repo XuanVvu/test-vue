@@ -61,12 +61,16 @@ const handleToggle = (item: any) => {
   }
 };
 
+const updateTree = (newTree: any) => {
+  arr.value = newTree;
+};
+
 
 </script>
 
 <template>
     <div>Test Page</div>
-    <tree :key="k" :data="arr" :depth="0" :openItems="openItems" @toggle-item="handleToggle"/>
+    <tree :key="k" :data="arr" :depth="0" :openItems="openItems" @toggle-item="handleToggle" @update-tree="updateTree"/>
     <router-link to="/">Home Page</router-link>
 
 </template>
